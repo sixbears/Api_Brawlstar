@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+	table.table
+		thead
+			tr
+				th Nom
+				th Catégorie
+		tbody
+			each map in maps
+				tr
+					td
+						p= map.name
+					td
+						p= map.cat
+			else
+				p Pas de maps disponible 
