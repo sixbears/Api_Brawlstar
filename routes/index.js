@@ -26,5 +26,22 @@ router.get('/maps', async (req, res, next) => {
   });
 })
 
+/* GET brawlers page */
+router.get('/brawlers', async (req, res, next) => {
+  const brawlers = await db.Brawlers.findAll();
+  res.format({
+
+      html: () => {
+          res.render('brawlers', {
+              title: 'Brawlers',
+              brawlers: brawlers
+          })
+      },
+
+      json: () => {
+          res.json(brawlers)
+      }
+  });
+})
 
 module.exports = router;
