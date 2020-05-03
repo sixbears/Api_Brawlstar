@@ -1,0 +1,18 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      a(href="/").navbar-brand Api-Brawlstar
+
+    ul.nav.navbar-nav  
+      if !session 
+        li 
+          a(href="/register") Register
+      else 
+        li
+          p Hi #{user.firstname} !
+        li
+            a(href="/maps") maps
+        li
+            a(href="/brawlers") brawlers
+      li
+        a(href=session ? '/logout' : '/login')= session ? 'Logout' : 'Login'
