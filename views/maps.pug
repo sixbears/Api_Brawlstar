@@ -7,6 +7,7 @@ block content
 			tr
 				th Nom
 				th Catégorie
+				th Carte
 		tbody
 			each map in maps
 				tr
@@ -14,5 +15,7 @@ block content
 						p= map.name
 					td
 						p= map.cat
+					td
+						p= map.image
 			else
 				p Pas de maps disponible 
