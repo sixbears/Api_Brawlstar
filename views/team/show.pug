@@ -5,7 +5,7 @@ block content
     h1= team.title
     h2 Map :
     h3= team.map
-
+    
     p= map.cat
     img(src=map.image, height=200)
     
@@ -21,6 +21,7 @@ block content
                     td= brawlers[val].nom
                     td
                         img(src= brawlers[val].image, height=100)
+                    td
 
     br
     form(action='/teams/' + team.id + '?_method=DELETE', method='POST')

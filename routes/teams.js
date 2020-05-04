@@ -96,11 +96,11 @@ router.get("/:teamId", async (req, res, next) => {
       }
   })
 
-  const map = await db.Maps.findAll({
-    where: {
-        name: team.map
-    }
-})
+    const map = await db.Maps.findAll({
+      where: {
+          name: team.map
+      }
+    })
 
 
     if (team.userId !== req.user.id) {
