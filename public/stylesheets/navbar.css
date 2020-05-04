@@ -1,0 +1,23 @@
+body {
+    color: blanchedalmond;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+  }
+  .navbar {
+    width : 100%;
+    background-color: black; 
+    margin-bottom: 20px;
+  }
+  nav {
+    float: left;
+  }
+  li {
+    font: 20px"Lucida Grande", Helvetica, Arial, sans-serif;
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    margin-right: 10%;
+    padding: 0;
+  }
+  
