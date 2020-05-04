@@ -14,5 +14,8 @@ block content
       label(for='compo') Compo
       textarea#compo.form-control(name='compo')= isNew ? '' : team.compo
       
+    .form-group
+      label(for='map') map
+      textarea#compo.form-control(type='text', name='map')= isNew ? '' : team.map
 
     input.btn.btn-default(type='submit', value= isNew ? 'Create' : 'Update')

@@ -14,17 +14,11 @@ router.post("/", async (req, res, next) => {
 
     const title = req.body.title ? req.body.title : "no title"
     const compo = req.body.compo ? req.body.compo : [1, 2, 3]
-    const map = req.body.title ? req.body.title : "no map"
+    const map = req.body.map ? req.body.map : "no map"
 
     const brawlers = await db.Brawlers.findAll({
       where: {
           id: compo
-      }
-    })
-
-    const mapcompo = await db.Maps.findAll({
-      where: {
-          name: map
       }
     })
 

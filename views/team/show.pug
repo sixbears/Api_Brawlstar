@@ -3,12 +3,18 @@ extends ../layout
 block content
 
     h1= team.title
+    h2 Map :
+    h3= team.map
 
+    p= map.cat
+    img(src=map.image, height=200)
+    
+    h2 Compo :
     table.table
         thead
             tr
-                th Brawlers
                 th 
+                
         tbody
             each val in [0,1,2]
                 tr
