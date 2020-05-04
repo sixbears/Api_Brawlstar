@@ -1,6 +1,7 @@
 # Api_Brawlstar
 
+Entrez npm install et allez a l'adresse : http://localhost:8080 
 
-npm install install -g express-generator
-npm install --save express body-parser sequelize sequelize-cli sqlite3 nodemon
-npm install axios
+Si jamais vous avez besoin :
+node_modules/.bin/sequelize db:migrate puis db:seed:all pour initialiser et remplir la base de données
+et node_modules/.bin/sequelize db:migrate:undo:all pour la detruire.
