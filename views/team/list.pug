@@ -12,13 +12,11 @@ block content
         thead
             tr
                 th Titre
-                th Compo
         tbody
             if count > 0
                 each team in teams
                     tr
                         td
                             a(href='/teams/' + team.id)= team.title
-                        td 
-                            team.map
+
 

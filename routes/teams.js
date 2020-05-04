@@ -231,8 +231,8 @@ router.patch("/:teamId", async (req, res, next) => {
     if (req.body.compo) {
       changes.compo = req.body.compo
     }
-    if (req.body.compomap) {
-      changes.compomap = req.body.compomap
+    if (req.body.map) {
+      changes.map = req.body.map
     }
     
 

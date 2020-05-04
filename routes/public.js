@@ -17,7 +17,45 @@ router.get('/', function(req, res, next) {
     user: req.user,
 });
 });
+/* maps */
+router.get('/maps', async (req, res, next) => {
+  const maps = await db.Maps.findAll();
+  res.format({
 
+      html: () => {
+          res.render('maps', {
+              title: 'Maps Brawl Star',
+              maps: maps,
+              session: req.session,
+              user: req.user
+          })
+      },
+
+      json: () => {
+          res.json(maps)
+      }
+  });
+})
+
+/* brawlers */
+router.get('/brawlers', async (req, res, next) => {
+  const brawlers = await db.Brawlers.findAll();
+  res.format({
+
+      html: () => {
+          res.render('brawlers', {
+              title: 'Brawlers',
+              brawlers: brawlers,
+              session: req.session,
+              user: req.user
+          })
+      },
+
+      json: () => {
+          res.json(brawlers)
+      }
+  });
+})
 
 /*
   Login routes

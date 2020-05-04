@@ -6,16 +6,22 @@ block content
 	table.table
 		thead
 			tr
+				th 
+				th
 				th Nom
 				th rareté
 				th points de vie
 				th degats 
 				th dégats super
 				th vitesse
-				th image
+				
 		tbody
 			each brawler in brawlers
 				tr
+					td 
+						p= brawler.id
+					td
+						img(src=brawler.image3d, height=100)
 					td
 						p= brawler.nom
 					td
@@ -28,11 +34,4 @@ block content
 						p= brawler.degats_attaque_super
 					td
 						p= brawler.vitesse
-					td
-						img(src=brawler.image, height=100)
-					td
-						img(src=brawler.image3d, height=100)
-                    
-
-			else
-				p Pas de brawlers disponible 
+					
