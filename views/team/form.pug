@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+
+  h1= isNew ? 'Create a team' : 'Update a team'
+        
+  form(action= isNew ? '/teams' : '/teams/' + team.id + '?_method=PATCH', method='POST')
+
+    .form-group
+      label(for='title') Title
+      input#title.form-control(type='text', name='title' value= isNew ? '' : team.title)
+
+    .form-group
+      label(for='compo') Compo
+      textarea#compo.form-control(name='compo')= isNew ? '' : team.compo
+      
+
+    input.btn.btn-default(type='submit', value= isNew ? 'Create' : 'Update')

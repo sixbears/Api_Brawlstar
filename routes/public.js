@@ -54,6 +54,7 @@ router.get('/brawlers', async (req, res, next) => {
   });
 })
 
+
 /*
   Login routes
 */

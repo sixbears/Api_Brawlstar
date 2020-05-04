@@ -8,6 +8,7 @@ const logger = require('morgan');
 
 const publicRouter = require('./routes/public');
 const usersRouter = require('./routes/users');
+const teamRouter = require('./routes/teams')
 
 const session = require('./utils/session')
 
@@ -31,9 +32,11 @@ app.use(session.check)
 app.use('/', publicRouter);
 app.use(session.redirect)
 
+
 /*  Private routes */
 
 app.use('/', usersRouter);
+app.use('/teams', teamRouter)
 
 
 // catch 404 and forward to error handler
